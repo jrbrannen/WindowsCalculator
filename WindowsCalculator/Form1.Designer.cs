@@ -57,8 +57,8 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.plusButton = new System.Windows.Forms.Button();
+            this.equalButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonpp
@@ -214,6 +214,7 @@
             this.button7.TabIndex = 39;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -281,6 +282,7 @@
             this.button5.TabIndex = 43;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button8
             // 
@@ -297,6 +299,7 @@
             this.button8.TabIndex = 44;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -508,38 +511,40 @@
             this.button22.Text = "×";
             this.button22.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // plusButton
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button23.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button23.Location = new System.Drawing.Point(237, 409);
-            this.button23.Margin = new System.Windows.Forms.Padding(1);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(76, 54);
-            this.button23.TabIndex = 58;
-            this.button23.Text = "+";
-            this.button23.UseVisualStyleBackColor = false;
+            this.plusButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.plusButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.plusButton.FlatAppearance.BorderSize = 0;
+            this.plusButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.plusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plusButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.plusButton.Location = new System.Drawing.Point(237, 409);
+            this.plusButton.Margin = new System.Windows.Forms.Padding(1);
+            this.plusButton.Name = "plusButton";
+            this.plusButton.Size = new System.Drawing.Size(76, 54);
+            this.plusButton.TabIndex = 58;
+            this.plusButton.Text = "+";
+            this.plusButton.UseVisualStyleBackColor = false;
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
-            // button24
+            // equalButton
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button24.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button24.Location = new System.Drawing.Point(237, 465);
-            this.button24.Margin = new System.Windows.Forms.Padding(1);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(76, 54);
-            this.button24.TabIndex = 59;
-            this.button24.Text = "=";
-            this.button24.UseVisualStyleBackColor = true;
+            this.equalButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.equalButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.equalButton.FlatAppearance.BorderSize = 0;
+            this.equalButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.equalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.equalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.equalButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.equalButton.Location = new System.Drawing.Point(237, 465);
+            this.equalButton.Margin = new System.Windows.Forms.Padding(1);
+            this.equalButton.Name = "equalButton";
+            this.equalButton.Size = new System.Drawing.Size(76, 54);
+            this.equalButton.TabIndex = 59;
+            this.equalButton.Text = "=";
+            this.equalButton.UseVisualStyleBackColor = true;
+            this.equalButton.Click += new System.EventHandler(this.equalButton_Click);
             // 
             // Form1
             // 
@@ -547,8 +552,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(318, 522);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
+            this.Controls.Add(this.equalButton);
+            this.Controls.Add(this.plusButton);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
@@ -616,7 +621,7 @@
         private Button button20;
         private Button button21;
         private Button button22;
-        private Button button23;
-        private Button button24;
+        private Button plusButton;
+        private Button equalButton;
     }
 }

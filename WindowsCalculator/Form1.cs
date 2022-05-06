@@ -3,6 +3,11 @@ namespace WindowsCalculator
     public partial class Form1 : Form
     {
         private string? inputString = "";
+        private string? secondInputString = "";
+        private float? firstInputFloat = null;
+        private float? secondInputFloat = null;
+        private string displayOutput;
+
         public Form1()
         {
             InitializeComponent();
@@ -13,21 +18,33 @@ namespace WindowsCalculator
             
         }
 
-        //private void button0_Click(object sender, EventArgs e)
-        //{
-        //    inputString += "0";
-        //    label1.Text = inputString;
-        //}
         private void button1_Click(object sender, EventArgs e)
         {
-            inputString += "1";
-            label1.Text = inputString;
+            //if(inputString == null)
+            //{
+                inputString += "1";
+                label1.Text = inputString;
+            //}
+            //else
+            //{
+            //    secondInputString +="1";
+            //    label1.Text = secondInputString;
+            //}
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            inputString += "2";
-            label1.Text = inputString;
+            //if (inputString == null)
+            //{
+                inputString += "2";
+                label1.Text = inputString;
+            //}
+            //else
+            //{
+            //    secondInputString += "2";
+            //    label1.Text = secondInputString;
+            //}
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -92,5 +109,51 @@ namespace WindowsCalculator
             inputString += "0";
             label1.Text = inputString;
         }
+
+        private void plusButton_Click(object sender, EventArgs e)
+        {
+            
+            if(inputString != null)
+            {
+                if(firstInputFloat == null && secondInputFloat == null)
+                {
+                    try
+                    {
+                        firstInputFloat = float.Parse(inputString);
+                        inputString = "";
+                        label1.Text = inputString;
+                    }
+                    catch(Exception)
+                    {
+                    }
+                }
+                else if (firstInputFloat != null && secondInputFloat == null)
+                {
+                    secondInputFloat = float.Parse(inputString);
+                    firstInputFloat = firstInputFloat + secondInputFloat;
+                    inputString = "";
+                    label1.Text = inputString;
+
+                }
+                else if (firstInputFloat != null && secondInputFloat != null)
+                {
+                    firstInputFloat += secondInputFloat;
+                    secondInputFloat = null;
+                    inputString = "";
+                    label1.Text = inputString;
+                }
+            }
+            
+        }
+
+        private void equalButton_Click(object sender, EventArgs e)
+        {
+            if (firstInputFloat != null)
+            {
+                displayOutput = firstInputFloat.ToString();
+            }
+            
+        }
+
     }
 }

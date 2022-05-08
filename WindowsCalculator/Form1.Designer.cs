@@ -52,9 +52,9 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.clearAllButton = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.subtractButton = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.plusButton = new System.Windows.Forms.Button();
@@ -430,21 +430,22 @@
             this.button17.TabIndex = 52;
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // button18
+            // clearAllButton
             // 
-            this.button18.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button18.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button18.Location = new System.Drawing.Point(159, 185);
-            this.button18.Margin = new System.Windows.Forms.Padding(1);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(76, 54);
-            this.button18.TabIndex = 53;
-            this.button18.Text = "C";
-            this.button18.UseVisualStyleBackColor = false;
+            this.clearAllButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.clearAllButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.clearAllButton.FlatAppearance.BorderSize = 0;
+            this.clearAllButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.clearAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearAllButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearAllButton.Location = new System.Drawing.Point(159, 185);
+            this.clearAllButton.Margin = new System.Windows.Forms.Padding(1);
+            this.clearAllButton.Name = "clearAllButton";
+            this.clearAllButton.Size = new System.Drawing.Size(76, 54);
+            this.clearAllButton.TabIndex = 53;
+            this.clearAllButton.Text = "C";
+            this.clearAllButton.UseVisualStyleBackColor = false;
+            this.clearAllButton.Click += new System.EventHandler(this.clearAllButton_Click);
             // 
             // button19
             // 
@@ -463,21 +464,21 @@
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
-            // button20
+            // subtractButton
             // 
-            this.button20.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button20.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.Location = new System.Drawing.Point(237, 353);
-            this.button20.Margin = new System.Windows.Forms.Padding(1);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(76, 54);
-            this.button20.TabIndex = 55;
-            this.button20.Text = "—";
-            this.button20.UseVisualStyleBackColor = false;
+            this.subtractButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.subtractButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.subtractButton.FlatAppearance.BorderSize = 0;
+            this.subtractButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.subtractButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subtractButton.Location = new System.Drawing.Point(237, 353);
+            this.subtractButton.Margin = new System.Windows.Forms.Padding(1);
+            this.subtractButton.Name = "subtractButton";
+            this.subtractButton.Size = new System.Drawing.Size(76, 54);
+            this.subtractButton.TabIndex = 55;
+            this.subtractButton.Text = "—";
+            this.subtractButton.UseVisualStyleBackColor = false;
             // 
             // button21
             // 
@@ -556,9 +557,9 @@
             this.Controls.Add(this.plusButton);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
+            this.Controls.Add(this.subtractButton);
             this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
+            this.Controls.Add(this.clearAllButton);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -616,9 +617,9 @@
         private Button button15;
         private Button button16;
         private Button button17;
-        private Button button18;
+        private Button clearAllButton;
         private Button button19;
-        private Button button20;
+        private Button subtractButton;
         private Button button21;
         private Button button22;
         private Button plusButton;

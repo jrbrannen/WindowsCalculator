@@ -3,10 +3,10 @@ namespace WindowsCalculator
     public partial class Form1 : Form
     {
         private string? inputString = "";
-        private string? secondInputString = "";
+        private char operation;
         private float? firstInputFloat = null;
         private float? secondInputFloat = null;
-        private string displayOutput;
+        //private string? displayOutput;
 
         public Form1()
         {
@@ -112,48 +112,82 @@ namespace WindowsCalculator
 
         private void plusButton_Click(object sender, EventArgs e)
         {
-            
-            if(inputString != null)
-            {
-                if(firstInputFloat == null && secondInputFloat == null)
-                {
-                    try
-                    {
-                        firstInputFloat = float.Parse(inputString);
-                        inputString = "";
-                        label1.Text = inputString;
-                    }
-                    catch(Exception)
-                    {
-                    }
-                }
-                else if (firstInputFloat != null && secondInputFloat == null)
-                {
-                    secondInputFloat = float.Parse(inputString);
-                    firstInputFloat = firstInputFloat + secondInputFloat;
-                    inputString = "";
-                    label1.Text = inputString;
+            operation = '+';
+            firstInputFloat = float.Parse(inputString);
+            inputString = "";
+            label1.Text = inputString;
+            //if (inputString != null)
+            //{
+            //    if (firstInputFloat == null && secondInputFloat == null)
+            //    {
+            //        try
+            //        {
+            //            firstInputFloat = float.Parse(inputString);
+            //            inputString = "";
+            //            label1.Text = inputString;
+            //        }
+            //        catch (Exception)
+            //        {
+            //        }
+            //    }
+            //    else if (firstInputFloat != null && secondInputFloat == null)
+            //    {
+            //        secondInputFloat = float.Parse(inputString);
+            //        firstInputFloat = firstInputFloat + secondInputFloat;
+            //        inputString = "";
+            //        label1.Text = inputString;
 
-                }
-                else if (firstInputFloat != null && secondInputFloat != null)
-                {
-                    firstInputFloat += secondInputFloat;
-                    secondInputFloat = null;
-                    inputString = "";
-                    label1.Text = inputString;
-                }
-            }
-            
+            //    }
+            //    else if (firstInputFloat != null && secondInputFloat != null)
+            //    {
+            //        firstInputFloat += secondInputFloat;
+            //        secondInputFloat = null;
+            //        inputString = "";
+            //        label1.Text = inputString;
+            //    }
+            //}
+
+        }
+
+        private void subtractButoon_Click(object sender, EventArgs e)
+        {
+            operation = '-';
         }
 
         private void equalButton_Click(object sender, EventArgs e)
         {
-            if (firstInputFloat != null)
-            {
-                displayOutput = firstInputFloat.ToString();
-            }
+            secondInputFloat = float.Parse(inputString);
+            label1.Text = calculate(firstInputFloat, secondInputFloat, operation).ToString();
             
         }
 
+        private float? calculate(float? firstInput, float? secondInput, char operation)
+        {
+            if (operation == '+')
+            {
+                return firstInput + secondInput;
+            }
+            else if (operation == '-')
+            {
+                return firstInput - secondInput;
+            }
+            else if (operation == '*')
+            {
+                return firstInput * secondInput;
+            }
+            else if (operation == '/')
+            {
+                return firstInput / secondInput;
+            }
+            return float.NaN;
+        }
+
+        private void clearAllButton_Click(object sender, EventArgs e)
+        {
+            label1.Text = "";
+            inputString = "";
+            firstInputFloat = 0.0f;
+            secondInputFloat = 0.0f;
+        }
     }
 }

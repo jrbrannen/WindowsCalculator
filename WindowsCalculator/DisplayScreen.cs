@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NameConcationationLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace WindowsCalculator
         public DisplayScreen(CalculatorForm parentForm)
         {
             InitializeComponent();
+        }
+
+        public void DisplayFullName(string firstName, string lastName)
+        {
+            NameConcationation fullName = new();
+            fullName.ConcationateFirstAndLastName(firstName, lastName);
         }
 
     }

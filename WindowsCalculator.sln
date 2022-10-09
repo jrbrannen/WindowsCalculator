@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WendisWebSite", "WendisWebS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleTestApplication", "ConsoleTestApplication", "{D37C2D6F-DB6D-426E-9883-8BFE98889154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestApplication", "ConsoleTestApplication\ConsoleTestApplication.csproj", "{8CFFB2CE-90D8-432A-A251-EE6D0B696C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTestApplication", "ConsoleTestApplication\ConsoleTestApplication.csproj", "{8CFFB2CE-90D8-432A-A251-EE6D0B696C05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITP.Server", "ITP\Server\ITP.Server.csproj", "{A48A4C5B-84DC-49EF-BC40-B76B6F6C7E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITP.Client", "ITP\Client\ITP.Client.csproj", "{23AA7AF4-D690-44A3-8B53-06B2259BF839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITP.Shared", "ITP\Shared\ITP.Shared.csproj", "{07378C56-71CE-43CA-8C60-D644FA400565}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,18 @@ Global
 		{8CFFB2CE-90D8-432A-A251-EE6D0B696C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CFFB2CE-90D8-432A-A251-EE6D0B696C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CFFB2CE-90D8-432A-A251-EE6D0B696C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48A4C5B-84DC-49EF-BC40-B76B6F6C7E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48A4C5B-84DC-49EF-BC40-B76B6F6C7E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48A4C5B-84DC-49EF-BC40-B76B6F6C7E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48A4C5B-84DC-49EF-BC40-B76B6F6C7E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AA7AF4-D690-44A3-8B53-06B2259BF839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AA7AF4-D690-44A3-8B53-06B2259BF839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AA7AF4-D690-44A3-8B53-06B2259BF839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AA7AF4-D690-44A3-8B53-06B2259BF839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07378C56-71CE-43CA-8C60-D644FA400565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07378C56-71CE-43CA-8C60-D644FA400565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07378C56-71CE-43CA-8C60-D644FA400565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07378C56-71CE-43CA-8C60-D644FA400565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

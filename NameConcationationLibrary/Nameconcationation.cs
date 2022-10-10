@@ -11,15 +11,21 @@
             }
         }
 
+        public NameConcationation()
+        {
+            FirstName = "";
+            LastName = "";
+        }
+
         public NameConcationation(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
         }
 
-        //public string ConcationateFirstAndLastName(string firstName, string lastName)
-        //{
-        //    return $"{firstName} {lastName}";
-        //}
+        public string ConcationateFirstAndLastName(string firstName, string lastName)
+        {
+            return $"{firstName} {lastName}";
+        }
     }
 }
